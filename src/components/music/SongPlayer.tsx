@@ -14,6 +14,17 @@ function getYoutubeEmbedId(url: string): string | null {
   return match ? match[1] : null;
 }
 
+const OFFSET_KEY = 'english-kids-lyric-offset';
+
+function loadOffsets(): Record<number, number> {
+  try { return JSON.parse(localStorage.getItem(OFFSET_KEY) ?? '{}'); } catch { return {}; }
+}
+function saveOffset(songId: number, offset: number) {
+  const all = loadOffsets();
+  all[songId] = offset;
+  localStorage.setItem(OFFSET_KEY, JSON.stringify(all));
+}
+
 export function SongPlayer({ songId, onClose }: Props) {
   const { getSongById } = useSongs();
   const { incrementSongsListened } = useProgress();
@@ -27,20 +38,40 @@ export function SongPlayer({ songId, onClose }: Props) {
   const [volume, setVolume] = useState(80);
   const [counted, setCounted] = useState(false);
   const [hideVideo, setHideVideo] = useState(false);
+  const [showOffsetCtrl, setShowOffsetCtrl] = useState(false);
+
+  const savedOffsets = loadOffsets();
+  const [offset, setOffsetState] = useState<number>(savedOffsets[songId] ?? 0);
+
+  const updateOffset = (val: number) => {
+    setOffsetState(val);
+    saveOffset(songId, val);
+  };
 
   const youtubeId = song?.youtubeUrl ? getYoutubeEmbedId(song.youtubeUrl) : null;
   const hasDirectAudio = !!(song?.audioUrl || song?.audioFile);
 
-  // Direct audio setup (Howler)
+  // Adjusted time for lyrics (subtract offset to delay lyrics when they're ahead)
+  const adjustedTime = currentTime - offset;
+
+  const currentLyricIndex = song?.lyrics.findIndex(
+    l => adjustedTime >= l.start && adjustedTime < l.end
+  ) ?? -1;
+
+  const formatTime = (s: number) => {
+    const m = Math.floor(Math.max(0, s) / 60);
+    const sec = Math.floor(Math.max(0, s) % 60);
+    return `${m}:${sec.toString().padStart(2, '0')}`;
+  };
+
+  // Direct audio (Howler)
   const initHowl = () => {
     if (!song || youtubeId || !hasDirectAudio) return;
     const src = song.audioUrl || song.audioFile;
     howlRef.current = new Howl({
-      src: [src],
-      volume: volume / 100,
+      src: [src], volume: volume / 100,
       onend: () => {
-        setPlaying(false);
-        setCurrentTime(0);
+        setPlaying(false); setCurrentTime(0);
         if (!counted) { incrementSongsListened(); setCounted(true); }
       },
     });
@@ -50,47 +81,63 @@ export function SongPlayer({ songId, onClose }: Props) {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       const seek = howlRef.current?.seek() as number | undefined;
-      if (typeof seek === 'number') setCurrentTime(Math.floor(seek));
-    }, 300);
+      if (typeof seek === 'number') setCurrentTime(seek);
+    }, 250);
   };
 
-  const play = () => {
-    if (!howlRef.current) initHowl();
-    howlRef.current?.play();
-    setPlaying(true);
-    startTicker();
-  };
-
-  const pause = () => {
-    howlRef.current?.pause();
-    setPlaying(false);
-    if (intervalRef.current) clearInterval(intervalRef.current);
-  };
-
-  const stop = () => {
-    howlRef.current?.stop();
-    setPlaying(false);
-    setCurrentTime(0);
-    if (intervalRef.current) clearInterval(intervalRef.current);
-  };
-
-  const seek = (value: number) => {
-    howlRef.current?.seek(value);
-    setCurrentTime(value);
-  };
-
-  // Lyrics sync
-  const currentLyricIndex = song?.lyrics.findIndex(
-    l => currentTime >= l.start && currentTime < l.end
-  ) ?? -1;
-
-  const formatTime = (s: number) => {
-    const m = Math.floor(s / 60);
-    const sec = Math.floor(s % 60);
-    return `${m}:${sec.toString().padStart(2, '0')}`;
-  };
+  const play = () => { if (!howlRef.current) initHowl(); howlRef.current?.play(); setPlaying(true); startTicker(); };
+  const pause = () => { howlRef.current?.pause(); setPlaying(false); if (intervalRef.current) clearInterval(intervalRef.current); };
+  const stop = () => { howlRef.current?.stop(); setPlaying(false); setCurrentTime(0); if (intervalRef.current) clearInterval(intervalRef.current); };
+  const seek = (v: number) => { howlRef.current?.seek(v); setCurrentTime(v); };
 
   if (!song) return <p className="text-center p-4">Música não encontrada.</p>;
+
+  const LyricsDisplay = () => (
+    <div className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-0.5 mt-3">
+      {song.lyrics.map((lyric, i) => (
+        <p
+          key={i}
+          className={`text-center text-sm px-2 py-1 rounded-lg transition-all duration-200 ${
+            i === currentLyricIndex
+              ? 'bg-[#FF6B6B] text-white font-bold text-base shadow-sm'
+              : i < currentLyricIndex
+              ? 'text-gray-300'
+              : 'text-gray-500'
+          }`}
+        >
+          {lyric.line}
+        </p>
+      ))}
+      {song.lyrics.length === 0 && (
+        <p className="text-center text-gray-400 text-sm py-4">Sem letra disponível</p>
+      )}
+    </div>
+  );
+
+  const OffsetControl = () => (
+    <div className="mt-2 bg-gray-50 rounded-xl p-3">
+      <div className="flex items-center justify-between mb-1">
+        <span className="text-xs text-gray-500 font-medium">⏱ Ajuste da letra</span>
+        <span className="text-xs font-bold text-[#FF6B6B]">
+          {offset > 0 ? `+${offset}s (atrasada)` : offset < 0 ? `${offset}s (adiantada)` : 'sincronizada'}
+        </span>
+      </div>
+      <input
+        type="range" min={-10} max={10} step={0.5} value={offset}
+        onChange={e => updateOffset(Number(e.target.value))}
+        className="w-full accent-[#FF6B6B]"
+        aria-label="Ajuste de sincronização da letra"
+      />
+      <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+        <span>Letra atrasada</span>
+        <button onClick={() => updateOffset(0)} className="text-[#4ECDC4] font-bold">Zerar</button>
+        <span>Letra adiantada</span>
+      </div>
+      <p className="text-xs text-gray-400 text-center mt-1">
+        Se a letra aparece <b>antes</b> do som → arraste para a esquerda
+      </p>
+    </div>
+  );
 
   return (
     <div className="bg-white rounded-3xl shadow-xl p-5 max-w-md mx-auto">
@@ -101,88 +148,61 @@ export function SongPlayer({ songId, onClose }: Props) {
         <p className="text-xs text-gray-400">{song.titlePT}</p>
       </div>
 
-      {/* YouTube mode */}
       {youtubeId ? (
         <>
-          {/* Toggle video/audio */}
-          <div className="flex justify-center mb-3">
+          {/* Controls row */}
+          <div className="flex justify-center gap-2 mb-3 flex-wrap">
             <button
               onClick={() => setHideVideo(v => !v)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all ${
-                hideVideo
-                  ? 'bg-[#FFE66D] text-[#2D3436]'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-bold transition-all ${
+                hideVideo ? 'bg-[#FFE66D] text-[#2D3436]' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
               {hideVideo ? '🎵 Só áudio' : '📺 Com vídeo'}
-              <span className="text-xs font-normal opacity-60">
-                {hideVideo ? '(clique para ver vídeo)' : '(clique para esconder)'}
-              </span>
+            </button>
+            <button
+              onClick={() => setShowOffsetCtrl(v => !v)}
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-bold transition-all ${
+                showOffsetCtrl ? 'bg-[#4ECDC4] text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              ⚙️ Letra {offset !== 0 ? `(${offset > 0 ? '+' : ''}${offset}s)` : ''}
             </button>
           </div>
 
-          {/* YouTube Player — esconde visualmente mas mantém áudio */}
-          <div className="mb-3">
-            <YouTubePlayer
-              videoId={youtubeId}
-              hidden={hideVideo}
-              onTimeUpdate={(t) => {
-                setCurrentTime(t);
-                if (t > 3 && !counted) {
-                  incrementSongsListened();
-                  setCounted(true);
-                }
-              }}
-            />
-          </div>
+          {/* Offset control */}
+          {showOffsetCtrl && <OffsetControl />}
 
-          {/* Letras sincronizadas */}
-          {song.lyrics.length > 0 && (
-            <div className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-1">
-              {song.lyrics.map((lyric, i) => (
-                <p
-                  key={i}
-                  className={`text-center text-base transition-all duration-200 px-2 py-0.5 rounded-lg ${
-                    i === currentLyricIndex
-                      ? 'bg-[#FF6B6B] text-white font-bold scale-105 shadow-sm'
-                      : i < currentLyricIndex
-                      ? 'text-gray-300 text-sm'
-                      : 'text-gray-500'
-                  }`}
-                >
-                  {lyric.line}
-                </p>
-              ))}
-            </div>
-          )}
+          {/* YouTube player */}
+          <YouTubePlayer
+            videoId={youtubeId}
+            hidden={hideVideo}
+            onTimeUpdate={(t) => {
+              setCurrentTime(t);
+              if (t > 3 && !counted) { incrementSongsListened(); setCounted(true); }
+            }}
+          />
+
+          {/* Lyrics */}
+          <LyricsDisplay />
 
           {currentTime > 0 && (
-            <p className="text-center text-xs text-gray-400 mt-2">
-              ⏱ {formatTime(currentTime)}
-            </p>
+            <p className="text-center text-xs text-gray-400 mt-1">⏱ {formatTime(currentTime)}</p>
           )}
         </>
       ) : hasDirectAudio ? (
         <>
-          {/* Lyrics with highlight for direct audio */}
-          <div className="bg-[#F7FFF9] rounded-2xl p-3 mb-3 min-h-[80px] max-h-48 overflow-y-auto flex flex-col gap-1">
-            {song.lyrics.map((lyric, i) => (
-              <p
-                key={i}
-                className={`text-center text-base transition-all duration-200 px-2 py-0.5 rounded-lg ${
-                  i === currentLyricIndex
-                    ? 'bg-[#FF6B6B] text-white font-bold scale-105'
-                    : i < currentLyricIndex
-                    ? 'text-gray-300 text-sm'
-                    : 'text-gray-500'
-                }`}
-              >
-                {lyric.line}
-              </p>
-            ))}
+          <div className="flex justify-end mb-1">
+            <button
+              onClick={() => setShowOffsetCtrl(v => !v)}
+              className="text-xs text-gray-400 hover:text-gray-600 px-2 py-1 rounded-full bg-gray-100"
+            >
+              ⚙️ Ajustar letra
+            </button>
           </div>
-
-          <div className="mb-3">
+          {showOffsetCtrl && <OffsetControl />}
+          <LyricsDisplay />
+          <div className="my-3">
             <input type="range" min={0} max={song.duration} value={currentTime}
               onChange={e => seek(Number(e.target.value))}
               className="w-full accent-[#FF6B6B]" aria-label="Progresso" />
@@ -191,7 +211,6 @@ export function SongPlayer({ songId, onClose }: Props) {
               <span>{formatTime(song.duration)}</span>
             </div>
           </div>
-
           <div className="flex justify-center gap-4 mb-3">
             <button onClick={stop} aria-label="Parar"
               className="w-12 h-12 rounded-full bg-gray-100 text-xl flex items-center justify-center hover:bg-gray-200 active:scale-95 transition-all">⏹️</button>
@@ -202,7 +221,6 @@ export function SongPlayer({ songId, onClose }: Props) {
             <button onClick={() => { stop(); setTimeout(play, 100); }} aria-label="Repetir"
               className="w-12 h-12 rounded-full bg-gray-100 text-xl flex items-center justify-center hover:bg-gray-200 active:scale-95 transition-all">🔄</button>
           </div>
-
           <div className="flex items-center gap-3">
             <span className="text-lg">🔊</span>
             <input type="range" min={0} max={100} value={volume}

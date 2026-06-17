@@ -23,11 +23,9 @@ function loadYouTubeAPI(onReady: () => void) {
   readyCallbacks.push(onReady);
   if (apiLoaded) return;
   apiLoaded = true;
-
   const script = document.createElement('script');
   script.src = 'https://www.youtube.com/iframe_api';
   document.head.appendChild(script);
-
   window.onYouTubeIframeAPIReady = () => {
     apiReady = true;
     readyCallbacks.forEach(cb => cb());
@@ -36,31 +34,52 @@ function loadYouTubeAPI(onReady: () => void) {
 }
 
 export function YouTubePlayer({ videoId, hidden, onTimeUpdate, onReady }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YT.Player | null>(null);
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const [ready, setReady] = useState(false);
+  const [playerReady, setPlayerReady] = useState(false);
 
   useEffect(() => {
     loadYouTubeAPI(() => {
-      if (!containerRef.current) return;
-      const div = document.createElement('div');
-      containerRef.current.appendChild(div);
+      if (!wrapperRef.current) return;
 
-      playerRef.current = new window.YT.Player(div, {
+      // Create a fresh placeholder div inside the wrapper
+      const placeholder = document.createElement('div');
+      wrapperRef.current.appendChild(placeholder);
+
+      playerRef.current = new window.YT.Player(placeholder, {
         videoId,
-        playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+        width: '100%',
+        height: '100%',
+        playerVars: {
+          rel: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          origin: window.location.origin,
+        },
         events: {
           onReady: () => {
-            setReady(true);
+            setPlayerReady(true);
             onReady?.();
             tickRef.current = setInterval(() => {
               const t = playerRef.current?.getCurrentTime?.() ?? 0;
               onTimeUpdate(t);
-            }, 300);
+            }, 250);
           },
         },
       });
+
+      // Force iframe to fill container after a tick
+      setTimeout(() => {
+        const iframe = wrapperRef.current?.querySelector('iframe');
+        if (iframe) {
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.position = 'absolute';
+          iframe.style.top = '0';
+          iframe.style.left = '0';
+        }
+      }, 800);
     });
 
     return () => {
@@ -72,10 +91,20 @@ export function YouTubePlayer({ videoId, hidden, onTimeUpdate, onReady }: Props)
 
   return (
     <div
-      ref={containerRef}
-      className={`w-full rounded-2xl overflow-hidden transition-all ${
-        hidden ? 'h-0 opacity-0 pointer-events-none' : 'aspect-video'
-      } ${!ready ? 'bg-gray-100 animate-pulse' : ''}`}
-    />
+      className={`transition-all duration-300 ${hidden ? 'hidden' : 'block'}`}
+    >
+      {/* 16:9 aspect ratio container */}
+      <div className="relative w-full rounded-2xl overflow-hidden bg-black" style={{ paddingBottom: '56.25%' }}>
+        <div
+          ref={wrapperRef}
+          className="absolute inset-0 w-full h-full"
+        />
+        {!playerReady && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
+            <div className="text-white text-sm animate-pulse">Carregando vídeo...</div>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
