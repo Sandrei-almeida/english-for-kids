@@ -1,5 +1,5 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "songs": [
     {
       "id": 1,
@@ -11,31 +11,254 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=eBVqcTEC3zQ",
       "lyrics": [
-        { "line": "One little finger, one little finger,", "start": 4, "end": 7 },
-        { "line": "One little finger, one little finger,", "start": 7, "end": 10 },
-        { "line": "One little finger, one little finger!", "start": 10, "end": 13 },
-        { "line": "Tap tap tap, tap tap tap", "start": 13, "end": 17 },
-        { "line": "Point your finger up", "start": 17, "end": 20 },
-        { "line": "Point your finger down", "start": 20, "end": 23 },
-        { "line": "Put it on your head, head, head!", "start": 23, "end": 27 },
-        { "line": "One little finger, one little finger,", "start": 27, "end": 30 },
-        { "line": "One little finger, one little finger,", "start": 30, "end": 33 },
-        { "line": "One little finger, one little finger!", "start": 33, "end": 36 },
-        { "line": "Tap tap tap, tap tap tap", "start": 36, "end": 40 },
-        { "line": "Point your finger up", "start": 40, "end": 43 },
-        { "line": "Point your finger down", "start": 43, "end": 46 },
-        { "line": "Put it on your nose, nose, nose!", "start": 46, "end": 50 },
-        { "line": "One little finger, one little finger,", "start": 50, "end": 53 },
-        { "line": "One little finger, one little finger,", "start": 53, "end": 56 },
-        { "line": "One little finger, one little finger!", "start": 56, "end": 59 },
-        { "line": "Tap tap tap, tap tap tap", "start": 59, "end": 63 },
-        { "line": "Point your finger up", "start": 63, "end": 66 },
-        { "line": "Point your finger down", "start": 66, "end": 69 },
-        { "line": "Put it on your tummy, tummy, tummy!", "start": 69, "end": 73 }
+        {
+          "line": "One little finger, one little finger, one little finger",
+          "start": 4,
+          "end": 9.3
+        },
+        {
+          "line": "Tap tap tap",
+          "start": 9.4,
+          "end": 11.1
+        },
+        {
+          "line": "Point your finger up",
+          "start": 11.1,
+          "end": 12.8
+        },
+        {
+          "line": "Point your finger down",
+          "start": 12.9,
+          "end": 14.6
+        },
+        {
+          "line": "Put it on your head",
+          "start": 14.8,
+          "end": 17.3
+        },
+        {
+          "line": "Head!",
+          "start": 17.4,
+          "end": 18.4
+        },
+        {
+          "line": "One little finger, one little finger, one little finger",
+          "start": 22.1,
+          "end": 27.4
+        },
+        {
+          "line": "Tap tap tap",
+          "start": 27.5,
+          "end": 28.9
+        },
+        {
+          "line": "Point your finger up",
+          "start": 29.1,
+          "end": 30.7
+        },
+        {
+          "line": "Point your finger down",
+          "start": 31,
+          "end": 32.6
+        },
+        {
+          "line": "Put it on your nose",
+          "start": 32.7,
+          "end": 35.4
+        },
+        {
+          "line": "Nose!",
+          "start": 35.5,
+          "end": 36.6
+        },
+        {
+          "line": "One little finger, one little finger, one little finger",
+          "start": 39.9,
+          "end": 45.5
+        },
+        {
+          "line": "Tap tap tap",
+          "start": 45.6,
+          "end": 47.2
+        },
+        {
+          "line": "Point your finger up",
+          "start": 47.3,
+          "end": 48.8
+        },
+        {
+          "line": "Point your finger down",
+          "start": 49,
+          "end": 50.7
+        },
+        {
+          "line": "Put it on your chin",
+          "start": 51,
+          "end": 53.5
+        },
+        {
+          "line": "Chin!",
+          "start": 53.6,
+          "end": 54.5
+        },
+        {
+          "line": "One little finger, one little finger, one little finger",
+          "start": 58.1,
+          "end": 63.5
+        },
+        {
+          "line": "Tap tap tap",
+          "start": 63.5,
+          "end": 65.2
+        },
+        {
+          "line": "Point your finger up",
+          "start": 65.3,
+          "end": 67
+        },
+        {
+          "line": "Point your finger down",
+          "start": 67.1,
+          "end": 68.8
+        },
+        {
+          "line": "Put it on your arm",
+          "start": 69,
+          "end": 71.4
+        },
+        {
+          "line": "Arm!",
+          "start": 71.5,
+          "end": 72.6
+        },
+        {
+          "line": "One little finger, one little finger, one little finger",
+          "start": 75.9,
+          "end": 81.6
+        },
+        {
+          "line": "Tap tap tap",
+          "start": 81.6,
+          "end": 83.3
+        },
+        {
+          "line": "Point your finger up",
+          "start": 83.5,
+          "end": 85.2
+        },
+        {
+          "line": "Point your finger down",
+          "start": 85.2,
+          "end": 87
+        },
+        {
+          "line": "Put it on your leg",
+          "start": 87.1,
+          "end": 89.4
+        },
+        {
+          "line": "Leg!",
+          "start": 89.6,
+          "end": 90.8
+        },
+        {
+          "line": "One little finger, one little finger, one little finger",
+          "start": 94,
+          "end": 99.6
+        },
+        {
+          "line": "Tap tap tap",
+          "start": 99.6,
+          "end": 101.4
+        },
+        {
+          "line": "Point your finger up",
+          "start": 101.5,
+          "end": 103.2
+        },
+        {
+          "line": "Point your finger down",
+          "start": 103.3,
+          "end": 105
+        },
+        {
+          "line": "Put it on your foot",
+          "start": 105.1,
+          "end": 107.4
+        },
+        {
+          "line": "Foot!",
+          "start": 107.7,
+          "end": 108.5
+        },
+        {
+          "line": "Put it on your leg",
+          "start": 108.6,
+          "end": 111
+        },
+        {
+          "line": "Leg!",
+          "start": 111.1,
+          "end": 112.2
+        },
+        {
+          "line": "Put it on your arm",
+          "start": 112.2,
+          "end": 114.7
+        },
+        {
+          "line": "Arm!",
+          "start": 114.8,
+          "end": 115.9
+        },
+        {
+          "line": "Put it on your chin",
+          "start": 115.9,
+          "end": 118.6
+        },
+        {
+          "line": "Chin!",
+          "start": 118.6,
+          "end": 119.4
+        },
+        {
+          "line": "Put it on your nose",
+          "start": 119.5,
+          "end": 122.2
+        },
+        {
+          "line": "Nose!",
+          "start": 122.3,
+          "end": 123.1
+        },
+        {
+          "line": "Put it on your head",
+          "start": 123.1,
+          "end": 125.6
+        },
+        {
+          "line": "Head!",
+          "start": 125.8,
+          "end": 126.5
+        },
+        {
+          "line": "Now let's wave goodbye",
+          "start": 126.6,
+          "end": 129.2
+        },
+        {
+          "line": "Goodbye!",
+          "start": 129.2,
+          "end": 131.8
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["body", "action", "beginner"]
+      "tags": [
+        "body",
+        "action",
+        "beginner"
+      ]
     },
     {
       "id": 2,
@@ -47,24 +270,104 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=RuqvGiZi0qg",
       "lyrics": [
-        { "line": "Head, shoulders, knees and toes", "start": 5, "end": 9 },
-        { "line": "Knees and toes", "start": 9, "end": 12 },
-        { "line": "Head, shoulders, knees and toes", "start": 12, "end": 16 },
-        { "line": "Knees and toes", "start": 16, "end": 19 },
-        { "line": "Eyes and ears and mouth and nose", "start": 19, "end": 24 },
-        { "line": "Head, shoulders, knees and toes", "start": 24, "end": 28 },
-        { "line": "Knees and toes!", "start": 28, "end": 31 },
-        { "line": "Head, shoulders, knees and toes", "start": 35, "end": 39 },
-        { "line": "Knees and toes", "start": 39, "end": 42 },
-        { "line": "Head, shoulders, knees and toes", "start": 42, "end": 46 },
-        { "line": "Knees and toes", "start": 46, "end": 49 },
-        { "line": "Eyes and ears and mouth and nose", "start": 49, "end": 54 },
-        { "line": "Head, shoulders, knees and toes", "start": 54, "end": 58 },
-        { "line": "Knees and toes!", "start": 58, "end": 62 }
+        {
+          "line": "(playful music)",
+          "start": 0.7,
+          "end": 3.3
+        },
+        {
+          "line": "(lively music)",
+          "start": 5,
+          "end": 7.5
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 9.4,
+          "end": 14.2
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 14.2,
+          "end": 18.4
+        },
+        {
+          "line": "♪ And eyes and ears and mouth and nose ♪",
+          "start": 18.4,
+          "end": 23.4
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 23.8,
+          "end": 28.8
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 33.4,
+          "end": 38.2
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 38.2,
+          "end": 42.4
+        },
+        {
+          "line": "♪ And eyes and ears and mouth and nose ♪",
+          "start": 42.4,
+          "end": 47.4
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 47.8,
+          "end": 52.8
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 57.4,
+          "end": 62.2
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 62.2,
+          "end": 66.4
+        },
+        {
+          "line": "♪ And eyes and ears and mouth and nose ♪",
+          "start": 66.4,
+          "end": 71.4
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 71.8,
+          "end": 76.8
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 81.5,
+          "end": 86.2
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 86.2,
+          "end": 90.4
+        },
+        {
+          "line": "♪ And eyes and ears and mouth and nose ♪",
+          "start": 90.4,
+          "end": 95.4
+        },
+        {
+          "line": "♪ Head, shoulders, knees, and toes, knees and toes ♪",
+          "start": 95.8,
+          "end": 100.8
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["body", "classic", "action"]
+      "tags": [
+        "body",
+        "classic",
+        "action"
+      ]
     },
     {
       "id": 3,
@@ -76,26 +379,164 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=KBL5aXSJTlE",
       "lyrics": [
-        { "line": "How's the weather? How's the weather?", "start": 5, "end": 10 },
-        { "line": "How's the weather today?", "start": 10, "end": 14 },
-        { "line": "It's sunny! It's sunny!", "start": 14, "end": 19 },
-        { "line": "It's a sunny day!", "start": 19, "end": 23 },
-        { "line": "How's the weather? How's the weather?", "start": 26, "end": 31 },
-        { "line": "How's the weather today?", "start": 31, "end": 35 },
-        { "line": "It's cloudy! It's cloudy!", "start": 35, "end": 40 },
-        { "line": "It's a cloudy day!", "start": 40, "end": 44 },
-        { "line": "How's the weather? How's the weather?", "start": 47, "end": 52 },
-        { "line": "How's the weather today?", "start": 52, "end": 56 },
-        { "line": "It's raining! It's raining!", "start": 56, "end": 61 },
-        { "line": "It's a rainy day!", "start": 61, "end": 65 },
-        { "line": "How's the weather? How's the weather?", "start": 68, "end": 73 },
-        { "line": "How's the weather today?", "start": 73, "end": 77 },
-        { "line": "It's snowing! It's snowing!", "start": 77, "end": 82 },
-        { "line": "It's a snowy day!", "start": 82, "end": 86 }
+        {
+          "line": "(xylophone playing)",
+          "start": 0.6,
+          "end": 3.6
+        },
+        {
+          "line": "(upbeat music)",
+          "start": 6.3,
+          "end": 8.8
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 14.5,
+          "end": 16.5
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 16.5,
+          "end": 18.5
+        },
+        {
+          "line": "♪ How's the weather today ♪",
+          "start": 18.5,
+          "end": 22.3
+        },
+        {
+          "line": "♪ Is it sunny ♪",
+          "start": 22.3,
+          "end": 24.2
+        },
+        {
+          "line": "♪ Is it rainy ♪",
+          "start": 24.2,
+          "end": 26.2
+        },
+        {
+          "line": "♪ Is it cloudy ♪",
+          "start": 26.2,
+          "end": 28.3
+        },
+        {
+          "line": "♪ Is it snowy ♪",
+          "start": 28.3,
+          "end": 30.9
+        },
+        {
+          "line": "♪ How's the weather today ♪",
+          "start": 30.9,
+          "end": 34.6
+        },
+        {
+          "line": "♪ Let's look outside ♪",
+          "start": 34.6,
+          "end": 37
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 37,
+          "end": 39.5
+        },
+        {
+          "line": "♪ Is it sunny today ♪",
+          "start": 39.5,
+          "end": 44.5
+        },
+        {
+          "line": "♪ Let's look outside ♪",
+          "start": 44.8,
+          "end": 47.6
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 47.6,
+          "end": 49.7
+        },
+        {
+          "line": "♪ Is it rainy today ♪",
+          "start": 49.7,
+          "end": 54.7
+        },
+        {
+          "line": "♪ Let's look outside ♪",
+          "start": 55,
+          "end": 57.8
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 57.8,
+          "end": 59.9
+        },
+        {
+          "line": "♪ Is it cloudy today ♪",
+          "start": 59.9,
+          "end": 64.9
+        },
+        {
+          "line": "♪ Let's look outside ♪",
+          "start": 65.3,
+          "end": 68.2
+        },
+        {
+          "line": "♪ Is it snowy today ♪",
+          "start": 68.2,
+          "end": 70.9
+        },
+        {
+          "line": "(upbeat music)",
+          "start": 70.9,
+          "end": 74
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 74,
+          "end": 76
+        },
+        {
+          "line": "♪ How's the weather ♪",
+          "start": 76,
+          "end": 78
+        },
+        {
+          "line": "♪ How's the weather today ♪",
+          "start": 78,
+          "end": 81.9
+        },
+        {
+          "line": "♪ Is it sunny ♪",
+          "start": 81.9,
+          "end": 83.8
+        },
+        {
+          "line": "♪ Is it rainy ♪",
+          "start": 83.8,
+          "end": 86
+        },
+        {
+          "line": "♪ Is it cloudy ♪",
+          "start": 86,
+          "end": 87.9
+        },
+        {
+          "line": "♪ Is it snowy ♪",
+          "start": 87.9,
+          "end": 90.5
+        },
+        {
+          "line": "♪ How's the weather today ♪",
+          "start": 90.5,
+          "end": 94.1
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["weather", "vocabulary", "beginner"]
+      "tags": [
+        "weather",
+        "vocabulary",
+        "beginner"
+      ]
     },
     {
       "id": 4,
@@ -107,22 +548,134 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=GS_cGsAnQvQ",
       "lyrics": [
-        { "line": "A B C D E F G", "start": 3, "end": 8 },
-        { "line": "H I J K L M N", "start": 8, "end": 13 },
-        { "line": "O P Q R S T U", "start": 13, "end": 18 },
-        { "line": "V W X Y Z", "start": 18, "end": 23 },
-        { "line": "Now I know my ABCs", "start": 23, "end": 28 },
-        { "line": "Next time won't you sing with me?", "start": 28, "end": 33 },
-        { "line": "A B C D E F G", "start": 36, "end": 41 },
-        { "line": "H I J K L M N", "start": 41, "end": 46 },
-        { "line": "O P Q R S T U", "start": 46, "end": 51 },
-        { "line": "V W X Y Z", "start": 51, "end": 56 },
-        { "line": "Now I know my ABCs", "start": 56, "end": 61 },
-        { "line": "Next time won't you sing with me?", "start": 61, "end": 66 }
+        {
+          "line": "A, B, C, D, E, F, G",
+          "start": 15.7,
+          "end": 20.9
+        },
+        {
+          "line": "H, I, J, K, L, M, N",
+          "start": 21.2,
+          "end": 26.4
+        },
+        {
+          "line": "O, P, Q, R, S, T, U",
+          "start": 26.9,
+          "end": 32
+        },
+        {
+          "line": "V, W, X, Y, Z!",
+          "start": 32.4,
+          "end": 37.9
+        },
+        {
+          "line": "Good job!",
+          "start": 38.3,
+          "end": 39.7
+        },
+        {
+          "line": "Faster?",
+          "start": 40.1,
+          "end": 41.4
+        },
+        {
+          "line": "Okay...",
+          "start": 41.5,
+          "end": 43
+        },
+        {
+          "line": "A, B, C, D, E, F, G",
+          "start": 43.3,
+          "end": 48
+        },
+        {
+          "line": "H, I, J, K, L, M, N",
+          "start": 48.2,
+          "end": 52.7
+        },
+        {
+          "line": "O, P, Q, R, S, T, U",
+          "start": 52.9,
+          "end": 57.6
+        },
+        {
+          "line": "V, W, X, Y, Z!",
+          "start": 57.8,
+          "end": 62.9
+        },
+        {
+          "line": "Great!",
+          "start": 63.1,
+          "end": 64.3
+        },
+        {
+          "line": "Faster?!",
+          "start": 64.6,
+          "end": 66.2
+        },
+        {
+          "line": "A, B, C, D, E, F, G",
+          "start": 67.1,
+          "end": 71
+        },
+        {
+          "line": "H, I, J, K, L, M, N",
+          "start": 71.3,
+          "end": 75.2
+        },
+        {
+          "line": "O, P, Q, R, S, T, U",
+          "start": 75.5,
+          "end": 79.3
+        },
+        {
+          "line": "V, W, X, Y, Z!",
+          "start": 79.6,
+          "end": 83.9
+        },
+        {
+          "line": "Okay...",
+          "start": 84,
+          "end": 85.6
+        },
+        {
+          "line": "Faster?!?!",
+          "start": 85.8,
+          "end": 87.3
+        },
+        {
+          "line": "A, B, C, D, E, F, G",
+          "start": 87.8,
+          "end": 91.4
+        },
+        {
+          "line": "H, I, J, K, L, M, N",
+          "start": 91.6,
+          "end": 95
+        },
+        {
+          "line": "O, P, Q, R, S, T, U",
+          "start": 95.2,
+          "end": 98.5
+        },
+        {
+          "line": "V, W, X, Y, Z!",
+          "start": 98.6,
+          "end": 102
+        },
+        {
+          "line": "Now I know my ABCs!",
+          "start": 103.3,
+          "end": 106.4
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["alphabet", "letters", "beginner"]
+      "tags": [
+        "alphabet",
+        "letters",
+        "beginner"
+      ]
     },
     {
       "id": 5,
@@ -134,25 +687,149 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=i14agob4uYU",
       "lyrics": [
-        { "line": "If you're happy and you know it, clap your hands!", "start": 4, "end": 10 },
-        { "line": "If you're happy and you know it, clap your hands!", "start": 10, "end": 16 },
-        { "line": "If you're happy and you know it,", "start": 16, "end": 20 },
-        { "line": "Then your face will surely show it,", "start": 20, "end": 24 },
-        { "line": "If you're happy and you know it, clap your hands!", "start": 24, "end": 30 },
-        { "line": "If you're happy and you know it, stomp your feet!", "start": 33, "end": 39 },
-        { "line": "If you're happy and you know it, stomp your feet!", "start": 39, "end": 45 },
-        { "line": "If you're happy and you know it,", "start": 45, "end": 49 },
-        { "line": "Then your face will surely show it,", "start": 49, "end": 53 },
-        { "line": "If you're happy and you know it, stomp your feet!", "start": 53, "end": 59 },
-        { "line": "If you're happy and you know it, shout hooray!", "start": 62, "end": 68 },
-        { "line": "If you're happy and you know it, shout hooray!", "start": 68, "end": 74 },
-        { "line": "If you're happy and you know it,", "start": 74, "end": 78 },
-        { "line": "Then your face will surely show it,", "start": 78, "end": 82 },
-        { "line": "If you're happy and you know it, shout hooray!", "start": 82, "end": 88 }
+        {
+          "line": "(bright music)",
+          "start": 0.7,
+          "end": 3.3
+        },
+        {
+          "line": "♪ If you're happy and you know it, clap your hands ♪",
+          "start": 12.5,
+          "end": 16.3
+        },
+        {
+          "line": "♪ If you're happy and you know it, clap your hands ♪",
+          "start": 16.3,
+          "end": 20.1
+        },
+        {
+          "line": "♪ If you're happy and you know it ♪",
+          "start": 20.1,
+          "end": 22.1
+        },
+        {
+          "line": "♪ Then your face will surely show it ♪",
+          "start": 22.1,
+          "end": 24
+        },
+        {
+          "line": "♪ If you're happy and you know it, clap your hands ♪",
+          "start": 24,
+          "end": 29
+        },
+        {
+          "line": "♪ If you're happy and you know it, stomp your feet ♪",
+          "start": 32,
+          "end": 35.9
+        },
+        {
+          "line": "♪ If you're happy and you know it, stomp your feet ♪",
+          "start": 35.9,
+          "end": 39.6
+        },
+        {
+          "line": "♪ If you're happy and you know it ♪",
+          "start": 39.6,
+          "end": 41.6
+        },
+        {
+          "line": "♪ Then your face will surely show it ♪",
+          "start": 41.6,
+          "end": 43.6
+        },
+        {
+          "line": "♪ If you're happy and you know it, stomp your feet ♪",
+          "start": 43.6,
+          "end": 48.6
+        },
+        {
+          "line": "♪ If you're happy and you know it, shout hurray ♪",
+          "start": 51.6,
+          "end": 54.2
+        },
+        {
+          "line": "♪ Hurray ♪",
+          "start": 54.2,
+          "end": 55.3
+        },
+        {
+          "line": "♪ If you're happy and you know it, shout hurray ♪",
+          "start": 55.3,
+          "end": 58.1
+        },
+        {
+          "line": "♪ Hurray ♪",
+          "start": 58.1,
+          "end": 59.2
+        },
+        {
+          "line": "♪ If you're happy and you know it ♪",
+          "start": 59.2,
+          "end": 61.1
+        },
+        {
+          "line": "♪ Then your face will surely show it ♪",
+          "start": 61.1,
+          "end": 63
+        },
+        {
+          "line": "♪ If you're happy and you know it, shout hurray ♪",
+          "start": 63,
+          "end": 65.9
+        },
+        {
+          "line": "♪ Hurray ♪",
+          "start": 65.9,
+          "end": 70.9
+        },
+        {
+          "line": "♪ If you're happy and you know it, do all three ♪",
+          "start": 71.2,
+          "end": 75.7
+        },
+        {
+          "line": "♪ Hurray ♪",
+          "start": 75.7,
+          "end": 76.9
+        },
+        {
+          "line": "♪ If you're happy and you know it, do all three ♪",
+          "start": 76.9,
+          "end": 81.5
+        },
+        {
+          "line": "♪ Hurray ♪",
+          "start": 81.5,
+          "end": 82.6
+        },
+        {
+          "line": "♪ If you're happy and you know it ♪",
+          "start": 82.6,
+          "end": 84.6
+        },
+        {
+          "line": "♪ Then your face will surely it ♪",
+          "start": 84.6,
+          "end": 86.5
+        },
+        {
+          "line": "♪ If you're happy and you know it, do all three ♪",
+          "start": 86.5,
+          "end": 91.3
+        },
+        {
+          "line": "♪ Hurray ♪",
+          "start": 91.3,
+          "end": 93.5
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["emotions", "action", "classic"]
+      "tags": [
+        "emotions",
+        "action",
+        "classic"
+      ]
     },
     {
       "id": 6,
@@ -164,26 +841,224 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=zxIpA5nF_LY",
       "lyrics": [
-        { "line": "What's your favorite color?", "start": 3, "end": 7 },
-        { "line": "What's your favorite color?", "start": 7, "end": 11 },
-        { "line": "My favorite color is red!", "start": 11, "end": 16 },
-        { "line": "Red, red, red — I love red!", "start": 16, "end": 21 },
-        { "line": "What's your favorite color?", "start": 24, "end": 28 },
-        { "line": "What's your favorite color?", "start": 28, "end": 32 },
-        { "line": "My favorite color is blue!", "start": 32, "end": 37 },
-        { "line": "Blue, blue, blue — I love blue!", "start": 37, "end": 42 },
-        { "line": "What's your favorite color?", "start": 45, "end": 49 },
-        { "line": "What's your favorite color?", "start": 49, "end": 53 },
-        { "line": "My favorite color is yellow!", "start": 53, "end": 58 },
-        { "line": "Yellow, yellow — I love yellow!", "start": 58, "end": 63 },
-        { "line": "What's your favorite color?", "start": 66, "end": 70 },
-        { "line": "What's your favorite color?", "start": 70, "end": 74 },
-        { "line": "My favorite color is green!", "start": 74, "end": 79 },
-        { "line": "Green, green, green — I love green!", "start": 79, "end": 84 }
+        {
+          "line": "(lively music)",
+          "start": 5.7,
+          "end": 8.3
+        },
+        {
+          "line": "♪ My favorite color's blue ♪",
+          "start": 13,
+          "end": 15.2
+        },
+        {
+          "line": "♪ How about you, how about you ♪",
+          "start": 15.2,
+          "end": 18
+        },
+        {
+          "line": "♪ My favorite color's blue ♪",
+          "start": 18,
+          "end": 19.9
+        },
+        {
+          "line": "♪ How about you, how about you ♪",
+          "start": 19.9,
+          "end": 23.2
+        },
+        {
+          "line": "♪ Red ♪",
+          "start": 23.2,
+          "end": 25.5
+        },
+        {
+          "line": "♪ My favorite color's red ♪",
+          "start": 25.5,
+          "end": 27.4
+        },
+        {
+          "line": "♪ I like red, I like red ♪",
+          "start": 27.4,
+          "end": 30
+        },
+        {
+          "line": "♪ My favorite color's red ♪",
+          "start": 30,
+          "end": 31.9
+        },
+        {
+          "line": "♪ I like red, I like red ♪",
+          "start": 31.9,
+          "end": 35.3
+        },
+        {
+          "line": "♪ Colors, colors ♪",
+          "start": 35.3,
+          "end": 37.4
+        },
+        {
+          "line": "♪ What's your favorite color ♪",
+          "start": 37.4,
+          "end": 39.8
+        },
+        {
+          "line": "♪ Colors, colors ♪",
+          "start": 39.8,
+          "end": 42.2
+        },
+        {
+          "line": "♪ What's your favorite color ♪",
+          "start": 42.2,
+          "end": 44.8
+        },
+        {
+          "line": "♪ Green ♪",
+          "start": 44.8,
+          "end": 47
+        },
+        {
+          "line": "♪ My favorite color's green ♪",
+          "start": 47,
+          "end": 48.9
+        },
+        {
+          "line": "♪ I like green, I like green ♪",
+          "start": 48.9,
+          "end": 51.5
+        },
+        {
+          "line": "♪ My favorite color's green ♪",
+          "start": 51.5,
+          "end": 53.5
+        },
+        {
+          "line": "♪ I like green, I like green ♪",
+          "start": 53.5,
+          "end": 56.8
+        },
+        {
+          "line": "♪ Yellow ♪",
+          "start": 56.8,
+          "end": 59
+        },
+        {
+          "line": "♪ My favorite color's yellow ♪",
+          "start": 59,
+          "end": 60.7
+        },
+        {
+          "line": "♪ I like yellow, I like yellow ♪",
+          "start": 60.7,
+          "end": 63.5
+        },
+        {
+          "line": "♪ My favorite color's yellow ♪",
+          "start": 63.5,
+          "end": 65.4
+        },
+        {
+          "line": "♪ I like yellow, I like yellow ♪",
+          "start": 65.4,
+          "end": 68.6
+        },
+        {
+          "line": "♪ Colors, colors ♪",
+          "start": 68.6,
+          "end": 71
+        },
+        {
+          "line": "♪ What's your favorite color ♪",
+          "start": 71,
+          "end": 73.4
+        },
+        {
+          "line": "♪ Colors, colors ♪",
+          "start": 73.4,
+          "end": 75.7
+        },
+        {
+          "line": "♪ What's your favorite color ♪",
+          "start": 75.7,
+          "end": 78.5
+        },
+        {
+          "line": "♪ Orange ♪",
+          "start": 78.5,
+          "end": 80.4
+        },
+        {
+          "line": "♪ My favorite color's orange ♪",
+          "start": 80.4,
+          "end": 82.5
+        },
+        {
+          "line": "♪ I like orange, I like orange ♪",
+          "start": 82.5,
+          "end": 85.2
+        },
+        {
+          "line": "♪ My favorite color's orange ♪",
+          "start": 85.2,
+          "end": 87.1
+        },
+        {
+          "line": "♪ I like orange, I like orange ♪",
+          "start": 87.1,
+          "end": 90.4
+        },
+        {
+          "line": "♪ Purple ♪",
+          "start": 90.4,
+          "end": 92.7
+        },
+        {
+          "line": "♪ My favorite color's purple ♪",
+          "start": 92.7,
+          "end": 94.4
+        },
+        {
+          "line": "♪ I like purple, I like purple ♪",
+          "start": 94.4,
+          "end": 97.2
+        },
+        {
+          "line": "♪ My favorite color's purple ♪",
+          "start": 97.2,
+          "end": 99
+        },
+        {
+          "line": "♪ I like purple, I like purple ♪",
+          "start": 99,
+          "end": 102.5
+        },
+        {
+          "line": "♪ Colors, colors ♪",
+          "start": 102.5,
+          "end": 104.5
+        },
+        {
+          "line": "♪ What's your favorite color ♪",
+          "start": 104.5,
+          "end": 106.9
+        },
+        {
+          "line": "♪ Colors, colors ♪",
+          "start": 106.9,
+          "end": 109.2
+        },
+        {
+          "line": "♪ What's your favorite color ♪",
+          "start": 109.2,
+          "end": 113.1
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["colors", "vocabulary", "questions"]
+      "tags": [
+        "colors",
+        "vocabulary",
+        "questions"
+      ]
     },
     {
       "id": 7,
@@ -195,30 +1070,114 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=ZhODBFQ2-bQ",
       "lyrics": [
-        { "line": "Five little monkeys jumping on the bed", "start": 4, "end": 9 },
-        { "line": "One fell off and bumped his head", "start": 9, "end": 14 },
-        { "line": "Mama called the doctor and the doctor said:", "start": 14, "end": 19 },
-        { "line": "No more monkeys jumping on the bed!", "start": 19, "end": 24 },
-        { "line": "Four little monkeys jumping on the bed", "start": 27, "end": 32 },
-        { "line": "One fell off and bumped his head", "start": 32, "end": 37 },
-        { "line": "Mama called the doctor and the doctor said:", "start": 37, "end": 42 },
-        { "line": "No more monkeys jumping on the bed!", "start": 42, "end": 47 },
-        { "line": "Three little monkeys jumping on the bed", "start": 50, "end": 55 },
-        { "line": "One fell off and bumped his head", "start": 55, "end": 60 },
-        { "line": "Mama called the doctor and the doctor said:", "start": 60, "end": 65 },
-        { "line": "No more monkeys jumping on the bed!", "start": 65, "end": 70 },
-        { "line": "Two little monkeys jumping on the bed", "start": 73, "end": 78 },
-        { "line": "One fell off and bumped his head", "start": 78, "end": 83 },
-        { "line": "Mama called the doctor and the doctor said:", "start": 83, "end": 88 },
-        { "line": "No more monkeys jumping on the bed!", "start": 88, "end": 93 },
-        { "line": "One little monkey jumping on the bed", "start": 96, "end": 101 },
-        { "line": "One fell off and bumped his head", "start": 101, "end": 106 },
-        { "line": "Mama called the doctor and the doctor said:", "start": 106, "end": 111 },
-        { "line": "No more monkeys jumping on the bed!", "start": 111, "end": 116 }
+        {
+          "line": "Five little monkeys jumping on the bed.",
+          "start": 16.3,
+          "end": 20
+        },
+        {
+          "line": "One fell off and bumped his head.",
+          "start": 20.2,
+          "end": 24
+        },
+        {
+          "line": "Mama called the doctor and the doctor said,",
+          "start": 24.3,
+          "end": 28.4
+        },
+        {
+          "line": "\"No more monkeys jumping on the bed!\"",
+          "start": 28.6,
+          "end": 31.8
+        },
+        {
+          "line": "Four little monkeys jumping on the bed.",
+          "start": 38.4,
+          "end": 42.3
+        },
+        {
+          "line": "One fell off and bumped his head.",
+          "start": 42.3,
+          "end": 46.3
+        },
+        {
+          "line": "Mama called the doctor and the doctor said,",
+          "start": 46.5,
+          "end": 49.9
+        },
+        {
+          "line": "\"No more monkeys jumping on the bed!\"",
+          "start": 50,
+          "end": 54.5
+        },
+        {
+          "line": "Three little monkeys jumping on the bed.",
+          "start": 60.1,
+          "end": 64.2
+        },
+        {
+          "line": "One fell off and bumped her head.",
+          "start": 64.2,
+          "end": 68.6
+        },
+        {
+          "line": "Mama called the doctor and the doctor said,",
+          "start": 68.6,
+          "end": 72.2
+        },
+        {
+          "line": "\"No more monkeys jumping on the bed!\"",
+          "start": 72.4,
+          "end": 76.7
+        },
+        {
+          "line": "Two monkeys jumping on the bed.",
+          "start": 82.6,
+          "end": 86.2
+        },
+        {
+          "line": "One fell off and bumped his head.",
+          "start": 86.2,
+          "end": 90.3
+        },
+        {
+          "line": "Mama called the doctor and the doctor said,",
+          "start": 90.5,
+          "end": 93.9
+        },
+        {
+          "line": "\"No more monkeys jumping on the bed!\"",
+          "start": 94.4,
+          "end": 98.6
+        },
+        {
+          "line": "One little monkey jumping on the bed.",
+          "start": 104.5,
+          "end": 108.3
+        },
+        {
+          "line": "She fell off and bumped her head.",
+          "start": 108.4,
+          "end": 112
+        },
+        {
+          "line": "Mama called the doctor and the doctor said,",
+          "start": 112.3,
+          "end": 116.1
+        },
+        {
+          "line": "\"No more monkeys jumping on the bed!\"",
+          "start": 116.4,
+          "end": 119.6
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["numbers", "counting", "fun"]
+      "tags": [
+        "numbers",
+        "counting",
+        "fun"
+      ]
     },
     {
       "id": 8,
@@ -230,43 +1189,251 @@
       "audioUrl": "",
       "youtubeUrl": "https://www.youtube.com/watch?v=TdDypyS_5zE",
       "lyrics": [
-        { "line": "There were ten in the bed", "start": 3, "end": 7 },
-        { "line": "And the little one said:", "start": 7, "end": 10 },
-        { "line": "Roll over! Roll over!", "start": 10, "end": 14 },
-        { "line": "So they all rolled over and one fell out", "start": 14, "end": 19 },
-        { "line": "There were nine in the bed", "start": 22, "end": 26 },
-        { "line": "And the little one said:", "start": 26, "end": 29 },
-        { "line": "Roll over! Roll over!", "start": 29, "end": 33 },
-        { "line": "So they all rolled over and one fell out", "start": 33, "end": 38 },
-        { "line": "There were eight in the bed", "start": 41, "end": 45 },
-        { "line": "And the little one said:", "start": 45, "end": 48 },
-        { "line": "Roll over! Roll over!", "start": 48, "end": 52 },
-        { "line": "So they all rolled over and one fell out", "start": 52, "end": 57 },
-        { "line": "There were seven in the bed", "start": 60, "end": 64 },
-        { "line": "And the little one said:", "start": 64, "end": 67 },
-        { "line": "Roll over! Roll over!", "start": 67, "end": 71 },
-        { "line": "So they all rolled over and one fell out", "start": 71, "end": 76 },
-        { "line": "There was one in the bed", "start": 120, "end": 124 },
-        { "line": "And the little one said:", "start": 124, "end": 127 },
-        { "line": "Good night!", "start": 127, "end": 132 }
+        {
+          "line": "Here we go!",
+          "start": 2,
+          "end": 3.4
+        },
+        {
+          "line": "There were ten in the bed and the little one said,",
+          "start": 3.7,
+          "end": 6.8
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 7,
+          "end": 10.2
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 10.5,
+          "end": 14.2
+        },
+        {
+          "line": "Nine!",
+          "start": 16.5,
+          "end": 17.5
+        },
+        {
+          "line": "There were nine in the bed and the little one said,",
+          "start": 17.7,
+          "end": 21
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 21.1,
+          "end": 24.5
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 24.8,
+          "end": 28.4
+        },
+        {
+          "line": "Eight!",
+          "start": 30.5,
+          "end": 31.5
+        },
+        {
+          "line": "There were eight in the bed and the little one said,",
+          "start": 31.9,
+          "end": 35
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 35.3,
+          "end": 38.5
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 38.8,
+          "end": 42.5
+        },
+        {
+          "line": "Seven!",
+          "start": 44.5,
+          "end": 45.5
+        },
+        {
+          "line": "There were seven in the bed and the little one said,",
+          "start": 46.3,
+          "end": 49.5
+        },
+        {
+          "line": "\"Roll over, roll over\"",
+          "start": 50,
+          "end": 52.7
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 52.9,
+          "end": 57
+        },
+        {
+          "line": "Six!",
+          "start": 58.5,
+          "end": 59.5
+        },
+        {
+          "line": "There were six in the bed and the little one said,",
+          "start": 60,
+          "end": 63.3
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 63.7,
+          "end": 66.8
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 67,
+          "end": 70
+        },
+        {
+          "line": "Five!",
+          "start": 72.7,
+          "end": 73.7
+        },
+        {
+          "line": "There were five in the bed and the little one said,",
+          "start": 74,
+          "end": 77.4
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 77.7,
+          "end": 81
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 81.2,
+          "end": 84.2
+        },
+        {
+          "line": "Four!",
+          "start": 86.8,
+          "end": 87.8
+        },
+        {
+          "line": "There were four in the bed and the little one said,",
+          "start": 88,
+          "end": 91.3
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 91.6,
+          "end": 95
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 95.2,
+          "end": 98.8
+        },
+        {
+          "line": "Three!",
+          "start": 101,
+          "end": 102
+        },
+        {
+          "line": "There were three in the bed and the little one said,",
+          "start": 102.5,
+          "end": 105.2
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 105.6,
+          "end": 109.4
+        },
+        {
+          "line": "So they all rolled over and one fell out.",
+          "start": 109.8,
+          "end": 112.8
+        },
+        {
+          "line": "Two!",
+          "start": 115,
+          "end": 116
+        },
+        {
+          "line": "There were two in the bed and the little one said,",
+          "start": 116.4,
+          "end": 119.6
+        },
+        {
+          "line": "\"Roll over, roll over.\"",
+          "start": 119.8,
+          "end": 123
+        },
+        {
+          "line": "So they both rolled over and one fell out.",
+          "start": 123.3,
+          "end": 127
+        },
+        {
+          "line": "One!",
+          "start": 129.3,
+          "end": 130.3
+        },
+        {
+          "line": "There was one in the bed and the little one said,",
+          "start": 130.6,
+          "end": 133.2
+        },
+        {
+          "line": "\"I'm lonely...\"",
+          "start": 133.5,
+          "end": 137
+        }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["numbers", "counting", "bedtime"]
+      "tags": [
+        "numbers",
+        "counting",
+        "bedtime"
+      ]
     }
   ],
   "categories": [
-    { "id": "body", "name": "Body", "namePT": "Corpo" },
-    { "id": "weather", "name": "Weather", "namePT": "Clima" },
-    { "id": "alphabet", "name": "Alphabet", "namePT": "Alfabeto" },
-    { "id": "emotions", "name": "Emotions", "namePT": "Emoções" },
-    { "id": "colors", "name": "Colors", "namePT": "Cores" },
-    { "id": "numbers", "name": "Numbers", "namePT": "Números" },
-    { "id": "classic", "name": "Classic Songs", "namePT": "Músicas Clássicas" }
+    {
+      "id": "body",
+      "name": "Body",
+      "namePT": "Corpo"
+    },
+    {
+      "id": "weather",
+      "name": "Weather",
+      "namePT": "Clima"
+    },
+    {
+      "id": "alphabet",
+      "name": "Alphabet",
+      "namePT": "Alfabeto"
+    },
+    {
+      "id": "emotions",
+      "name": "Emotions",
+      "namePT": "Emoções"
+    },
+    {
+      "id": "colors",
+      "name": "Colors",
+      "namePT": "Cores"
+    },
+    {
+      "id": "numbers",
+      "name": "Numbers",
+      "namePT": "Números"
+    },
+    {
+      "id": "classic",
+      "name": "Classic Songs",
+      "namePT": "Músicas Clássicas"
+    }
   ],
   "metadata": {
     "lastUpdated": "2026-06-17",
-    "version": "1.4",
+    "version": "1.5",
     "totalSongs": 8,
     "totalCategories": 7
   }
