@@ -1,5 +1,5 @@
 {
-  "version": "1.6",
+  "version": "1.7",
   "songs": [
     {
       "id": 1,
@@ -1392,6 +1392,150 @@
         "counting",
         "bedtime"
       ]
+    },
+    {
+      "id": 9,
+      "title": "The Alphabet Song",
+      "titlePT": "A Música do Alfabeto",
+      "theme": "alphabet",
+      "duration": 140,
+      "audioFile": "",
+      "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ccEpTTZW34g",
+      "lyrics": [
+        {
+          "line": "(bright music)",
+          "start": 0.7,
+          "end": 3.3
+        },
+        {
+          "line": "(cheery music)",
+          "start": 5.9,
+          "end": 8.5
+        },
+        {
+          "line": "- Okay, Sparky. Let's try this one more time.",
+          "start": 13.1,
+          "end": 17.3
+        },
+        {
+          "line": "(Sparky barks)",
+          "start": 17.3,
+          "end": 19.6
+        },
+        {
+          "line": "♪ A, B, C, D ♪",
+          "start": 19.6,
+          "end": 22.9
+        },
+        {
+          "line": "♪ E, F, G ♪",
+          "start": 22.9,
+          "end": 26.5
+        },
+        {
+          "line": "♪ H, I, J, K ♪",
+          "start": 26.5,
+          "end": 29.8
+        },
+        {
+          "line": "♪ L, M, N, O, P ♪",
+          "start": 29.8,
+          "end": 33.2
+        },
+        {
+          "line": "♪ Q, R, S ♪",
+          "start": 33.2,
+          "end": 36.8
+        },
+        {
+          "line": "♪ T, U, V ♪",
+          "start": 36.8,
+          "end": 40.2
+        },
+        {
+          "line": "♪ W, X, Y, and Z ♪",
+          "start": 40.2,
+          "end": 45.2
+        },
+        {
+          "line": "♪ Now I know my ABCs ♪",
+          "start": 47,
+          "end": 52
+        },
+        {
+          "line": "♪ Next time won't you sing with me ♪",
+          "start": 53.9,
+          "end": 58.2
+        },
+        {
+          "line": "Come on, Sparky. Let's sing it together.",
+          "start": 62,
+          "end": 64.4
+        },
+        {
+          "line": "(Sparky barks)",
+          "start": 64.4,
+          "end": 67.6
+        },
+        {
+          "line": "♪ A, B, C, D ♪",
+          "start": 67.6,
+          "end": 71
+        },
+        {
+          "line": "♪ E, F, G ♪",
+          "start": 71,
+          "end": 74.4
+        },
+        {
+          "line": "♪ H, I, J, K ♪",
+          "start": 74.4,
+          "end": 77.9
+        },
+        {
+          "line": "♪ L, M, N, O, P ♪",
+          "start": 77.9,
+          "end": 81.3
+        },
+        {
+          "line": "♪ Q, R, S ♪",
+          "start": 81.3,
+          "end": 84.8
+        },
+        {
+          "line": "♪ T, U, V ♪",
+          "start": 84.8,
+          "end": 88.3
+        },
+        {
+          "line": "♪ W, X, Y, and Z ♪",
+          "start": 88.3,
+          "end": 93.3
+        },
+        {
+          "line": "♪ Now I know my ABCs ♪",
+          "start": 95.2,
+          "end": 100.2
+        },
+        {
+          "line": "♪ Next time won't you sing with me ♪",
+          "start": 101.9,
+          "end": 106.1
+        },
+        {
+          "line": "(cheery music)",
+          "start": 108.6,
+          "end": 111.2
+        }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": [
+        "alphabet",
+        "letters",
+        "beginner"
+      ]
     }
   ],
   "categories": [
@@ -1433,7 +1577,7 @@
   ],
   "metadata": {
     "lastUpdated": "2026-06-17",
-    "version": "1.6",
+    "version": "1.7",
     "totalSongs": 8,
     "totalCategories": 7
   }
