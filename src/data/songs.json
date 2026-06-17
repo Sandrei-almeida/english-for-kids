@@ -1,0 +1,107 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Twinkle Twinkle Little Star",
+      "titlePT": "Estrela Estrela Brilhante",
+      "theme": "stars",
+      "duration": 180,
+      "audioFile": "/audio/songs/twinkle_twinkle.mp3",
+      "audioUrl": "",
+      "lyrics": [
+        { "line": "Twinkle, twinkle, little star", "start": 0, "end": 10 },
+        { "line": "How I wonder what you are", "start": 10, "end": 20 },
+        { "line": "Up above the world so high", "start": 20, "end": 30 },
+        { "line": "Like a diamond in the sky", "start": 30, "end": 40 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["classic", "calm", "beginner"]
+    },
+    {
+      "id": 2,
+      "title": "The Wheels on the Bus",
+      "titlePT": "As Rodas do Ônibus",
+      "theme": "transport",
+      "duration": 200,
+      "audioFile": "/audio/songs/wheels_on_bus.mp3",
+      "audioUrl": "",
+      "lyrics": [
+        { "line": "The wheels on the bus go round and round", "start": 0, "end": 12 },
+        { "line": "Round and round, round and round", "start": 12, "end": 20 },
+        { "line": "The wheels on the bus go round and round", "start": 20, "end": 32 },
+        { "line": "All through the town", "start": 32, "end": 40 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["action", "fun", "transport"]
+    },
+    {
+      "id": 3,
+      "title": "Old MacDonald Had a Farm",
+      "titlePT": "O Velho MacDonald Tinha uma Fazenda",
+      "theme": "animals",
+      "duration": 220,
+      "audioFile": "/audio/songs/old_macdonald.mp3",
+      "audioUrl": "",
+      "lyrics": [
+        { "line": "Old MacDonald had a farm, E-I-E-I-O", "start": 0, "end": 15 },
+        { "line": "And on that farm he had a cow, E-I-E-I-O", "start": 15, "end": 30 },
+        { "line": "With a moo-moo here and a moo-moo there", "start": 30, "end": 45 },
+        { "line": "Here a moo, there a moo, everywhere a moo-moo", "start": 45, "end": 60 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["animals", "sounds", "farm"]
+    },
+    {
+      "id": 4,
+      "title": "Hello, Hello, Hello",
+      "titlePT": "Olá, Olá, Olá",
+      "theme": "greetings",
+      "duration": 150,
+      "audioFile": "/audio/songs/hello_hello.mp3",
+      "audioUrl": "",
+      "lyrics": [
+        { "line": "Hello, hello, hello, how are you?", "start": 0, "end": 10 },
+        { "line": "Hello, hello, hello, how are you?", "start": 10, "end": 20 },
+        { "line": "I'm good, I'm great, I'm wonderful too!", "start": 20, "end": 35 },
+        { "line": "Hello, hello, how are you?", "start": 35, "end": 45 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["greetings", "social", "beginner"]
+    },
+    {
+      "id": 5,
+      "title": "Colors Song",
+      "titlePT": "Cantiga das Cores",
+      "theme": "colors",
+      "duration": 160,
+      "audioFile": "/audio/songs/colors_song.mp3",
+      "audioUrl": "",
+      "lyrics": [
+        { "line": "Red and yellow and pink and green", "start": 0, "end": 12 },
+        { "line": "Purple and orange and blue", "start": 12, "end": 22 },
+        { "line": "I can sing a rainbow", "start": 22, "end": 30 },
+        { "line": "Sing a rainbow too", "start": 30, "end": 40 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["colors", "learning", "vocabulary"]
+    }
+  ],
+  "categories": [
+    { "id": "classic", "name": "Classic Songs", "namePT": "Músicas Clássicas" },
+    { "id": "animals", "name": "Animals", "namePT": "Animais" },
+    { "id": "colors", "name": "Colors", "namePT": "Cores" },
+    { "id": "greetings", "name": "Greetings", "namePT": "Cumprimentos" },
+    { "id": "transport", "name": "Transport", "namePT": "Transporte" }
+  ],
+  "metadata": {
+    "lastUpdated": "2026-06-17",
+    "version": "1.0",
+    "totalSongs": 5,
+    "totalCategories": 5
+  }
+}
