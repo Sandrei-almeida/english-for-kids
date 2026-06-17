@@ -56,13 +56,21 @@ export function SongPlayer({ songId, onClose }: Props) {
     l => adjustedTime >= l.start && adjustedTime < l.end
   ) ?? -1;
 
-  // ── Auto-scroll: calcula dentro do container, não usa scrollIntoView ──
+  // ── Auto-scroll usando getBoundingClientRect para posição real ──
   useEffect(() => {
     const container = lyricsContainerRef.current;
     const active = activeLyricRef.current;
     if (!container || !active || currentLyricIndex < 0) return;
-    const target = active.offsetTop - container.clientHeight / 2 + active.offsetHeight / 2;
-    container.scrollTo({ top: target, behavior: 'smooth' });
+
+    const containerRect = container.getBoundingClientRect();
+    const activeRect = active.getBoundingClientRect();
+
+    // Posição do item em relação ao topo do container (considerando scroll atual)
+    const activeRelativeTop = activeRect.top - containerRect.top + container.scrollTop;
+    // Queremos que o item fique centralizado
+    const targetScroll = activeRelativeTop - containerRect.height / 2 + activeRect.height / 2;
+
+    container.scrollTop = targetScroll;
   }, [currentLyricIndex]);
 
   const formatTime = (s: number) => {
