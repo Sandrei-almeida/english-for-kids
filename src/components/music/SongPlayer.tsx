@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { Howl } from 'howler';
 import { useSongs } from '../../hooks/useSongs';
 import { useProgress } from '../../hooks/useProgress';
@@ -32,8 +32,6 @@ export function SongPlayer({ songId, onClose }: Props) {
   // ── Todos os hooks ANTES de qualquer return condicional ──
   const howlRef = useRef<Howl | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const lyricsContainerRef = useRef<HTMLDivElement>(null);
-  const activeLyricRef = useRef<HTMLParagraphElement>(null);
 
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -56,22 +54,6 @@ export function SongPlayer({ songId, onClose }: Props) {
     l => adjustedTime >= l.start && adjustedTime < l.end
   ) ?? -1;
 
-  // ── Auto-scroll usando getBoundingClientRect para posição real ──
-  useEffect(() => {
-    const container = lyricsContainerRef.current;
-    const active = activeLyricRef.current;
-    if (!container || !active || currentLyricIndex < 0) return;
-
-    const containerRect = container.getBoundingClientRect();
-    const activeRect = active.getBoundingClientRect();
-
-    // Posição do item em relação ao topo do container (considerando scroll atual)
-    const activeRelativeTop = activeRect.top - containerRect.top + container.scrollTop;
-    // Queremos que o item fique centralizado
-    const targetScroll = activeRelativeTop - containerRect.height / 2 + activeRect.height / 2;
-
-    container.scrollTop = targetScroll;
-  }, [currentLyricIndex]);
 
   const formatTime = (s: number) => {
     const m = Math.floor(Math.max(0, s) / 60);
@@ -106,32 +88,57 @@ export function SongPlayer({ songId, onClose }: Props) {
 
   if (!song) return <p className="text-center p-4">Música não encontrada.</p>;
 
-  // ── JSX inlinado — não usa sub-componentes para preservar os refs ──
-  const lyricsJSX = (
-    <div
-      ref={lyricsContainerRef}
-      className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-0.5 mt-3"
-    >
-      {song.lyrics.length === 0
-        ? <p className="text-center text-gray-400 text-sm py-4">Sem letra disponível</p>
-        : song.lyrics.map((lyric, i) => (
-          <p
-            key={i}
-            ref={i === currentLyricIndex ? activeLyricRef : null}
-            className={`text-center text-sm px-2 py-1 rounded-lg transition-all duration-200 ${
-              i === currentLyricIndex
-                ? 'bg-[#FF6B6B] text-white font-bold text-base shadow-sm'
-                : i < currentLyricIndex
-                ? 'text-gray-300'
-                : 'text-gray-500'
-            }`}
-          >
-            {lyric.line}
-          </p>
-        ))
-      }
-    </div>
-  );
+  // Altura de cada linha em px — fixo para cálculo do translate
+  const LINE_H = 36;
+  const VISIBLE_H = 180; // max-h do container
+
+  // Karaokê: desliza a lista para centralizar a linha ativa
+  const translateY = currentLyricIndex < 0
+    ? 0
+    : VISIBLE_H / 2 - LINE_H / 2 - currentLyricIndex * LINE_H;
+
+  const lyricsJSX = song.lyrics.length === 0
+    ? (
+      <div className="bg-[#F7FFF9] rounded-2xl p-3 mt-3 text-center text-gray-400 text-sm py-4">
+        Sem letra disponível
+      </div>
+    )
+    : (
+      <div
+        className="bg-[#F7FFF9] rounded-2xl mt-3 overflow-hidden relative"
+        style={{ height: VISIBLE_H }}
+      >
+        {/* Gradiente topo */}
+        <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#F7FFF9] to-transparent z-10 pointer-events-none" />
+        {/* Gradiente base */}
+        <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#F7FFF9] to-transparent z-10 pointer-events-none" />
+
+        {/* Lista que desliza */}
+        <div
+          style={{
+            transform: `translateY(${translateY}px)`,
+            transition: 'transform 0.35s ease',
+          }}
+          className="flex flex-col px-3 pt-1"
+        >
+          {song.lyrics.map((lyric, i) => (
+            <p
+              key={i}
+              style={{ height: LINE_H, lineHeight: `${LINE_H}px` }}
+              className={`text-center text-sm px-2 rounded-lg transition-all duration-200 truncate ${
+                i === currentLyricIndex
+                  ? 'text-[#FF6B6B] font-bold text-base scale-105'
+                  : i < currentLyricIndex
+                  ? 'text-gray-300'
+                  : 'text-gray-500'
+              }`}
+            >
+              {lyric.line}
+            </p>
+          ))}
+        </div>
+      </div>
+    );
 
   const offsetCtrlJSX = showOffsetCtrl && (
     <div className="mt-2 bg-gray-50 rounded-xl p-3">
