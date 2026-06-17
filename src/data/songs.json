@@ -1,14 +1,15 @@
 {
+  "version": "1.2",
   "songs": [
     {
       "id": 1,
       "title": "One Little Finger",
-      "titlePT": "Um Dedo",
+      "titlePT": "Um Dedinho",
       "theme": "body",
       "duration": 120,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=mE0R8z3bBNs",
+      "youtubeUrl": "https://www.youtube.com/watch?v=eBVqcTEC3zQ",
       "lyrics": [
         { "line": "One little finger, one little finger", "start": 0, "end": 8 },
         { "line": "Tap tap tap, tap tap tap", "start": 8, "end": 16 },
@@ -28,7 +29,7 @@
       "duration": 150,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=h4eueDYPTIg",
+      "youtubeUrl": "https://www.youtube.com/watch?v=RuqvGiZi0qg",
       "lyrics": [
         { "line": "Head, shoulders, knees and toes", "start": 0, "end": 8 },
         { "line": "Knees and toes", "start": 8, "end": 14 },
@@ -47,7 +48,7 @@
       "duration": 140,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=rD4IgJHBt8M",
+      "youtubeUrl": "https://www.youtube.com/watch?v=KBL5aXSJTlE",
       "lyrics": [
         { "line": "How's the weather? How's the weather?", "start": 0, "end": 10 },
         { "line": "How's the weather today?", "start": 10, "end": 18 },
@@ -66,7 +67,7 @@
       "duration": 160,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=1hMBBGSMBHk",
+      "youtubeUrl": "https://www.youtube.com/watch?v=GS_cGsAnQvQ",
       "lyrics": [
         { "line": "A B C D E F G", "start": 0, "end": 8 },
         { "line": "H I J K L M N", "start": 8, "end": 16 },
@@ -85,7 +86,7 @@
       "duration": 130,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=l4WNrvVjiTw",
+      "youtubeUrl": "https://www.youtube.com/watch?v=i14agob4uYU",
       "lyrics": [
         { "line": "If you're happy and you know it, clap your hands!", "start": 0, "end": 10 },
         { "line": "If you're happy and you know it, clap your hands!", "start": 10, "end": 20 },
@@ -105,7 +106,7 @@
       "duration": 150,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=mRWRBgBHJE4",
+      "youtubeUrl": "https://www.youtube.com/watch?v=zxIpA5nF_LY",
       "lyrics": [
         { "line": "What's your favorite color?", "start": 0, "end": 8 },
         { "line": "What's your favorite color?", "start": 8, "end": 16 },
@@ -124,7 +125,7 @@
       "duration": 170,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=ZFrS8HVPKXU",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ZhODBFQ2-bQ",
       "lyrics": [
         { "line": "Five little monkeys jumping on the bed", "start": 0, "end": 10 },
         { "line": "One fell off and bumped his head", "start": 10, "end": 18 },
@@ -143,7 +144,7 @@
       "duration": 180,
       "audioFile": "",
       "audioUrl": "",
-      "youtubeUrl": "https://www.youtube.com/watch?v=_h3nXMhSBBM",
+      "youtubeUrl": "https://www.youtube.com/watch?v=TdDypyS_5zE",
       "lyrics": [
         { "line": "There were ten in the bed", "start": 0, "end": 8 },
         { "line": "And the little one said:", "start": 8, "end": 14 },
@@ -166,7 +167,7 @@
   ],
   "metadata": {
     "lastUpdated": "2026-06-17",
-    "version": "1.1",
+    "version": "1.2",
     "totalSongs": 8,
     "totalCategories": 7
   }

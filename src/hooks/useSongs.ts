@@ -29,9 +29,13 @@ export interface Category {
 }
 
 const STORAGE_KEY = 'english-kids-songs';
+const VERSION_KEY = 'english-kids-songs-version';
+const CURRENT_VERSION = songsData.metadata.version;
 
 function loadFromStorage(): Song[] | null {
   try {
+    const storedVersion = localStorage.getItem(VERSION_KEY);
+    if (storedVersion !== CURRENT_VERSION) return null; // versão mudou → ignora cache
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : null;
   } catch {
@@ -41,6 +45,7 @@ function loadFromStorage(): Song[] | null {
 
 function saveToStorage(songs: Song[]) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(songs));
+  localStorage.setItem(VERSION_KEY, CURRENT_VERSION);
 }
 
 export function useSongs() {
