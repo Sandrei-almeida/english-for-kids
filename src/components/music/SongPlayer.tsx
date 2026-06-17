@@ -95,19 +95,22 @@ export function SongPlayer({ songId, onClose }: Props) {
   const lyricsContainerRef = useRef<HTMLDivElement>(null);
   const activeLyricRef = useRef<HTMLParagraphElement>(null);
 
+  // Auto-scroll: manually calculate offset inside the container
   useEffect(() => {
-    if (activeLyricRef.current && lyricsContainerRef.current) {
-      activeLyricRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      });
-    }
+    const container = lyricsContainerRef.current;
+    const active = activeLyricRef.current;
+    if (!container || !active) return;
+    const itemTop = active.offsetTop;
+    const itemHeight = active.offsetHeight;
+    const containerHeight = container.clientHeight;
+    const targetScroll = itemTop - containerHeight / 2 + itemHeight / 2;
+    container.scrollTo({ top: targetScroll, behavior: 'smooth' });
   }, [currentLyricIndex]);
 
   const LyricsDisplay = () => (
     <div
       ref={lyricsContainerRef}
-      className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-0.5 mt-3 scroll-smooth"
+      className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-0.5 mt-3"
     >
       {song.lyrics.map((lyric, i) => (
         <p

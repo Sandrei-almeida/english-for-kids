@@ -1,5 +1,5 @@
 {
-  "version": "1.5",
+  "version": "1.6",
   "songs": [
     {
       "id": 1,
@@ -1433,7 +1433,7 @@
   ],
   "metadata": {
     "lastUpdated": "2026-06-17",
-    "version": "1.5",
+    "version": "1.6",
     "totalSongs": 8,
     "totalCategories": 7
   }
