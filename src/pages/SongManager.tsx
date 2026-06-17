@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSongs } from '../hooks/useSongs';
 import type { Song } from '../hooks/useSongs';
 
-type NewSong = Pick<Song, 'title' | 'titlePT' | 'duration' | 'audioFile' | 'audioUrl' | 'difficulty' | 'theme' | 'tags'>;
+type NewSong = Pick<Song, 'title' | 'titlePT' | 'duration' | 'audioFile' | 'audioUrl' | 'youtubeUrl' | 'difficulty' | 'theme' | 'tags'>;
 
 const EMPTY_FORM: NewSong = {
   title: '',
@@ -10,6 +10,7 @@ const EMPTY_FORM: NewSong = {
   duration: 120,
   audioFile: '',
   audioUrl: '',
+  youtubeUrl: '',
   difficulty: 'easy',
   theme: '',
   tags: [],
@@ -60,6 +61,7 @@ export function SongManager() {
             { label: 'Título (PT)', key: 'titlePT' as const },
             { label: 'Arquivo de áudio (/audio/songs/...)', key: 'audioFile' as const },
             { label: 'URL de áudio (opcional)', key: 'audioUrl' as const },
+            { label: 'URL do YouTube (opcional)', key: 'youtubeUrl' as const },
             { label: 'Tema', key: 'theme' as const },
           ].map(field => (
             <div key={field.key}>

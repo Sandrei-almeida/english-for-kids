@@ -15,6 +15,7 @@ export interface Song {
   duration: number;
   audioFile: string;
   audioUrl: string;
+  youtubeUrl?: string;
   lyrics: Lyric[];
   difficulty: 'easy' | 'medium' | 'hard';
   active: boolean;

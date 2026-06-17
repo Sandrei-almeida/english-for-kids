@@ -2,106 +2,172 @@
   "songs": [
     {
       "id": 1,
-      "title": "Twinkle Twinkle Little Star",
-      "titlePT": "Estrela Estrela Brilhante",
-      "theme": "stars",
-      "duration": 180,
-      "audioFile": "/audio/songs/twinkle_twinkle.mp3",
+      "title": "One Little Finger",
+      "titlePT": "Um Dedo",
+      "theme": "body",
+      "duration": 120,
+      "audioFile": "",
       "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=mE0R8z3bBNs",
       "lyrics": [
-        { "line": "Twinkle, twinkle, little star", "start": 0, "end": 10 },
-        { "line": "How I wonder what you are", "start": 10, "end": 20 },
-        { "line": "Up above the world so high", "start": 20, "end": 30 },
-        { "line": "Like a diamond in the sky", "start": 30, "end": 40 }
+        { "line": "One little finger, one little finger", "start": 0, "end": 8 },
+        { "line": "Tap tap tap, tap tap tap", "start": 8, "end": 16 },
+        { "line": "Point your finger up", "start": 16, "end": 22 },
+        { "line": "Point your finger down", "start": 22, "end": 28 },
+        { "line": "Put it on your head!", "start": 28, "end": 36 }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["classic", "calm", "beginner"]
+      "tags": ["body", "action", "beginner"]
     },
     {
       "id": 2,
-      "title": "The Wheels on the Bus",
-      "titlePT": "As Rodas do Ônibus",
-      "theme": "transport",
-      "duration": 200,
-      "audioFile": "/audio/songs/wheels_on_bus.mp3",
+      "title": "Head, Shoulders, Knees and Toes",
+      "titlePT": "Cabeça, Ombros, Joelhos e Pés",
+      "theme": "body",
+      "duration": 150,
+      "audioFile": "",
       "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=h4eueDYPTIg",
       "lyrics": [
-        { "line": "The wheels on the bus go round and round", "start": 0, "end": 12 },
-        { "line": "Round and round, round and round", "start": 12, "end": 20 },
-        { "line": "The wheels on the bus go round and round", "start": 20, "end": 32 },
-        { "line": "All through the town", "start": 32, "end": 40 }
+        { "line": "Head, shoulders, knees and toes", "start": 0, "end": 8 },
+        { "line": "Knees and toes", "start": 8, "end": 14 },
+        { "line": "Head, shoulders, knees and toes", "start": 14, "end": 22 },
+        { "line": "Eyes and ears and mouth and nose", "start": 22, "end": 32 }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["action", "fun", "transport"]
+      "tags": ["body", "classic", "action"]
     },
     {
       "id": 3,
-      "title": "Old MacDonald Had a Farm",
-      "titlePT": "O Velho MacDonald Tinha uma Fazenda",
-      "theme": "animals",
-      "duration": 220,
-      "audioFile": "/audio/songs/old_macdonald.mp3",
+      "title": "How's The Weather?",
+      "titlePT": "Como Está o Tempo?",
+      "theme": "weather",
+      "duration": 140,
+      "audioFile": "",
       "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=rD4IgJHBt8M",
       "lyrics": [
-        { "line": "Old MacDonald had a farm, E-I-E-I-O", "start": 0, "end": 15 },
-        { "line": "And on that farm he had a cow, E-I-E-I-O", "start": 15, "end": 30 },
-        { "line": "With a moo-moo here and a moo-moo there", "start": 30, "end": 45 },
-        { "line": "Here a moo, there a moo, everywhere a moo-moo", "start": 45, "end": 60 }
+        { "line": "How's the weather? How's the weather?", "start": 0, "end": 10 },
+        { "line": "How's the weather today?", "start": 10, "end": 18 },
+        { "line": "It's sunny! It's sunny!", "start": 18, "end": 26 },
+        { "line": "It's a sunny day!", "start": 26, "end": 34 }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["animals", "sounds", "farm"]
+      "tags": ["weather", "vocabulary", "beginner"]
     },
     {
       "id": 4,
-      "title": "Hello, Hello, Hello",
-      "titlePT": "Olá, Olá, Olá",
-      "theme": "greetings",
-      "duration": 150,
-      "audioFile": "/audio/songs/hello_hello.mp3",
+      "title": "The Alphabet Chant",
+      "titlePT": "O Canto do Alfabeto",
+      "theme": "alphabet",
+      "duration": 160,
+      "audioFile": "",
       "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=1hMBBGSMBHk",
       "lyrics": [
-        { "line": "Hello, hello, hello, how are you?", "start": 0, "end": 10 },
-        { "line": "Hello, hello, hello, how are you?", "start": 10, "end": 20 },
-        { "line": "I'm good, I'm great, I'm wonderful too!", "start": 20, "end": 35 },
-        { "line": "Hello, hello, how are you?", "start": 35, "end": 45 }
+        { "line": "A B C D E F G", "start": 0, "end": 8 },
+        { "line": "H I J K L M N", "start": 8, "end": 16 },
+        { "line": "O P Q R S T U", "start": 16, "end": 24 },
+        { "line": "V W X Y Z", "start": 24, "end": 32 }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["greetings", "social", "beginner"]
+      "tags": ["alphabet", "letters", "beginner"]
     },
     {
       "id": 5,
-      "title": "Colors Song",
-      "titlePT": "Cantiga das Cores",
-      "theme": "colors",
-      "duration": 160,
-      "audioFile": "/audio/songs/colors_song.mp3",
+      "title": "If You're Happy",
+      "titlePT": "Se Você Está Feliz",
+      "theme": "emotions",
+      "duration": 130,
+      "audioFile": "",
       "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=l4WNrvVjiTw",
       "lyrics": [
-        { "line": "Red and yellow and pink and green", "start": 0, "end": 12 },
-        { "line": "Purple and orange and blue", "start": 12, "end": 22 },
-        { "line": "I can sing a rainbow", "start": 22, "end": 30 },
-        { "line": "Sing a rainbow too", "start": 30, "end": 40 }
+        { "line": "If you're happy and you know it, clap your hands!", "start": 0, "end": 10 },
+        { "line": "If you're happy and you know it, clap your hands!", "start": 10, "end": 20 },
+        { "line": "If you're happy and you know it", "start": 20, "end": 28 },
+        { "line": "Then your face will surely show it", "start": 28, "end": 36 },
+        { "line": "If you're happy and you know it, clap your hands!", "start": 36, "end": 46 }
       ],
       "difficulty": "easy",
       "active": true,
-      "tags": ["colors", "learning", "vocabulary"]
+      "tags": ["emotions", "action", "classic"]
+    },
+    {
+      "id": 6,
+      "title": "What's Your Favorite Color?",
+      "titlePT": "Qual é a Sua Cor Favorita?",
+      "theme": "colors",
+      "duration": 150,
+      "audioFile": "",
+      "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=mRWRBgBHJE4",
+      "lyrics": [
+        { "line": "What's your favorite color?", "start": 0, "end": 8 },
+        { "line": "What's your favorite color?", "start": 8, "end": 16 },
+        { "line": "My favorite color is red!", "start": 16, "end": 24 },
+        { "line": "Red, red, red — I love red!", "start": 24, "end": 32 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["colors", "vocabulary", "questions"]
+    },
+    {
+      "id": 7,
+      "title": "Five Little Monkeys",
+      "titlePT": "Cinco Macacinhos",
+      "theme": "numbers",
+      "duration": 170,
+      "audioFile": "",
+      "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ZFrS8HVPKXU",
+      "lyrics": [
+        { "line": "Five little monkeys jumping on the bed", "start": 0, "end": 10 },
+        { "line": "One fell off and bumped his head", "start": 10, "end": 18 },
+        { "line": "Mama called the doctor and the doctor said", "start": 18, "end": 28 },
+        { "line": "No more monkeys jumping on the bed!", "start": 28, "end": 38 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["numbers", "counting", "fun"]
+    },
+    {
+      "id": 8,
+      "title": "Ten In The Bed",
+      "titlePT": "Dez na Cama",
+      "theme": "numbers",
+      "duration": 180,
+      "audioFile": "",
+      "audioUrl": "",
+      "youtubeUrl": "https://www.youtube.com/watch?v=_h3nXMhSBBM",
+      "lyrics": [
+        { "line": "There were ten in the bed", "start": 0, "end": 8 },
+        { "line": "And the little one said:", "start": 8, "end": 14 },
+        { "line": "Roll over! Roll over!", "start": 14, "end": 22 },
+        { "line": "So they all rolled over and one fell out", "start": 22, "end": 32 }
+      ],
+      "difficulty": "easy",
+      "active": true,
+      "tags": ["numbers", "counting", "bedtime"]
     }
   ],
   "categories": [
-    { "id": "classic", "name": "Classic Songs", "namePT": "Músicas Clássicas" },
-    { "id": "animals", "name": "Animals", "namePT": "Animais" },
+    { "id": "body", "name": "Body", "namePT": "Corpo" },
+    { "id": "weather", "name": "Weather", "namePT": "Clima" },
+    { "id": "alphabet", "name": "Alphabet", "namePT": "Alfabeto" },
+    { "id": "emotions", "name": "Emotions", "namePT": "Emoções" },
     { "id": "colors", "name": "Colors", "namePT": "Cores" },
-    { "id": "greetings", "name": "Greetings", "namePT": "Cumprimentos" },
-    { "id": "transport", "name": "Transport", "namePT": "Transporte" }
+    { "id": "numbers", "name": "Numbers", "namePT": "Números" },
+    { "id": "classic", "name": "Classic Songs", "namePT": "Músicas Clássicas" }
   ],
   "metadata": {
     "lastUpdated": "2026-06-17",
-    "version": "1.0",
-    "totalSongs": 5,
-    "totalCategories": 5
+    "version": "1.1",
+    "totalSongs": 8,
+    "totalCategories": 7
   }
 }
