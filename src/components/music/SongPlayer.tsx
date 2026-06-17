@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Howl } from 'howler';
 import { useSongs } from '../../hooks/useSongs';
 import { useProgress } from '../../hooks/useProgress';
@@ -92,11 +92,27 @@ export function SongPlayer({ songId, onClose }: Props) {
 
   if (!song) return <p className="text-center p-4">Música não encontrada.</p>;
 
+  const lyricsContainerRef = useRef<HTMLDivElement>(null);
+  const activeLyricRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (activeLyricRef.current && lyricsContainerRef.current) {
+      activeLyricRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [currentLyricIndex]);
+
   const LyricsDisplay = () => (
-    <div className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-0.5 mt-3">
+    <div
+      ref={lyricsContainerRef}
+      className="bg-[#F7FFF9] rounded-2xl p-3 max-h-52 overflow-y-auto flex flex-col gap-0.5 mt-3 scroll-smooth"
+    >
       {song.lyrics.map((lyric, i) => (
         <p
           key={i}
+          ref={i === currentLyricIndex ? activeLyricRef : null}
           className={`text-center text-sm px-2 py-1 rounded-lg transition-all duration-200 ${
             i === currentLyricIndex
               ? 'bg-[#FF6B6B] text-white font-bold text-base shadow-sm'
