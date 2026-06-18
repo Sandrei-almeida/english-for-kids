@@ -1,4 +1,4 @@
--- Tabela de progresso (uma por usuário)
+-- Tabela de progresso
 create table if not exists progress (
   id uuid default gen_random_uuid() primary key,
   user_id uuid references auth.users(id) on delete cascade unique,
@@ -12,8 +12,12 @@ create table if not exists progress (
   created_at timestamptz default now()
 );
 
--- Segurança: cada usuário só vê/edita seu próprio progresso
 alter table progress enable row level security;
+
+-- Remove policies existentes antes de recriar
+drop policy if exists "Users can view own progress" on progress;
+drop policy if exists "Users can insert own progress" on progress;
+drop policy if exists "Users can update own progress" on progress;
 
 create policy "Users can view own progress"
   on progress for select using (auth.uid() = user_id);
@@ -43,6 +47,8 @@ create table if not exists user_songs (
 );
 
 alter table user_songs enable row level security;
+
+drop policy if exists "Users can manage own songs" on user_songs;
 
 create policy "Users can manage own songs"
   on user_songs for all using (auth.uid() = user_id);

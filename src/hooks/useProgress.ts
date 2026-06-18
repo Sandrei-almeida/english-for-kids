@@ -40,7 +40,7 @@ function loadLocal(): ChildProgress {
 }
 
 function saveLocal(p: ChildProgress) {
-  localStorage.setItem(LOCAL_KEY, JSON.stringify(p));
+  try { localStorage.setItem(LOCAL_KEY, JSON.stringify(p)); } catch { /* ignore */ }
 }
 
 export function useProgress() {
@@ -48,9 +48,8 @@ export function useProgress() {
   const [progress, setProgress] = useState<ChildProgress>(loadLocal);
   const [syncing, setSyncing] = useState(false);
 
-  // Carrega do Supabase quando usuário loga
   useEffect(() => {
-    if (!user) return;
+    if (!user || !supabase) return;
     setSyncing(true);
     supabase
       .from('progress')
@@ -73,12 +72,12 @@ export function useProgress() {
           saveLocal(p);
         }
         setSyncing(false);
-      });
+      }).then(() => { /* ok */ }, () => setSyncing(false));
   }, [user]);
 
   const persist = useCallback(async (p: ChildProgress) => {
     saveLocal(p);
-    if (!user) return;
+    if (!user || !supabase) return;
     await supabase.from('progress').upsert({
       user_id: user.id,
       child_name: p.name,
